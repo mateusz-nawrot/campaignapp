@@ -6,4 +6,6 @@
     <color name="whiteShadowTextColor">#FBFBFB</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="blackWithAlpha">#5a000000</color>
+    <color name="blackAlmostTransparent">#28000000</color>
 </resources>

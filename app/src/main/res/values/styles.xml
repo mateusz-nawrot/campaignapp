@@ -20,13 +20,25 @@
     <style name="Text"/>
 
     <style name="Text.WhiteWithShadow">
-        <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/whiteShadowTextColor</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:shadowColor">@color/black</item>
         <item name="android:shadowDx">4</item>
         <item name="android:shadowDy">4</item>
         <item name="android:shadowRadius">14</item>
+    </style>
+
+    <style name="Text.WhiteWithShadow.Large">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Text.WhiteWithShadow.Medium">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Text.WhiteWithShadow.Small">
+        <item name="android:textSize">14sp</item>
     </style>
 
 </resources>

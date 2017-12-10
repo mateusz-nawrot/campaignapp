@@ -18,8 +18,10 @@
 
     <TextView
         android:id="@+id/campaignTitle"
-        style="@style/Text.WhiteWithShadow"
-        android:layout_width="wrap_content"
+        style="@style/Text.WhiteWithShadow.Large"
+        android:background="@color/blackAlmostTransparent"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/campaignImage"

@@ -38,21 +38,29 @@
 
         <TextView
             android:id="@+id/campaignDetailsDescription"
-            android:layout_width="wrap_content"
+            style="@style/Text.WhiteWithShadow.Small"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@color/blackWithAlpha"
             android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="blablalbalbla"/>
-
+            tools:text="Description"/>
 
         <TextView
             android:id="@+id/campaignDetailsTitle"
-            android:layout_width="wrap_content"
+            style="@style/Text.WhiteWithShadow.Medium"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="absdasda"
+            android:background="@color/blackWithAlpha"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
             app:layout_constraintBottom_toTopOf="@id/campaignDetailsDescription"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Title"/>
 
     </android.support.constraint.ConstraintLayout>
 
