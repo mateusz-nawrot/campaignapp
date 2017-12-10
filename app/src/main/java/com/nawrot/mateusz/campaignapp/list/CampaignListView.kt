@@ -8,4 +8,6 @@ interface CampaignListView : BaseView {
 
     fun showCampaigns(campaigns: List<Campaign>)
 
+    fun openCampaignDetailsScreen(campaign: Campaign)
+
 }

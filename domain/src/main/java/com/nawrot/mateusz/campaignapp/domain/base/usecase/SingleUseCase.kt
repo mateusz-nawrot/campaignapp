@@ -4,15 +4,15 @@ import com.nawrot.mateusz.campaignapp.domain.base.SchedulersProvider
 import io.reactivex.Single
 
 
-abstract class SingleUseCase <in P, R>(private val schedulersProvider: SchedulersProvider) {
+abstract class SingleUseCase <R>(private val schedulersProvider: SchedulersProvider) {
 
     private lateinit var single: Single<R>
 
-    fun execute(param: P): Single<R> {
-        single = createUseCaseSingle(param).compose(schedulersProvider.singleTransformer())
+    fun execute(): Single<R> {
+        single = createUseCaseSingle().compose(schedulersProvider.singleTransformer())
         return single
     }
 
-    protected abstract fun createUseCaseSingle(param: P): Single<R>
+    protected abstract fun createUseCaseSingle(): Single<R>
 
 }

@@ -24,6 +24,10 @@ kapt {
     generateStubs = true
 }
 
+androidExtensions {
+    experimental = true
+}
+
 dependencies {
     implementation project(':data')
 
@@ -45,4 +49,7 @@ dependencies {
 
     //rxbindings
     implementation "com.jakewharton.rxbinding2:rxbinding-kotlin:$rootProject.rxBindingVersion"
+
+    implementation "com.squareup.picasso:picasso:$rootProject.picassoVersion"
+
 }
