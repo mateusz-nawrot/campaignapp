@@ -29,7 +29,7 @@ class CampaignDetailsActivity : BaseActivity(), CampaignDetailsView {
     override fun onStart() {
         super.onStart()
         presenter.attachView(this)
-        presenter.showCampaignDetails()
+        presenter.getCampaignDetailsFromBundle()
     }
 
     override fun onStop() {

@@ -8,7 +8,7 @@ import javax.inject.Inject
 @ActivityScope
 class CampaignDetailsPresenter @Inject constructor() : BasePresenter<CampaignDetailsView>() {
 
-    fun showCampaignDetails() {
+    fun getCampaignDetailsFromBundle() {
         val campaign = view?.getCampaignParam()
 
         campaign?.let {

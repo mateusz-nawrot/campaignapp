@@ -33,7 +33,6 @@ class CampaignListPresenterTest {
     fun setup() {
         MockitoAnnotations.initMocks(this)
         presenter = CampaignListPresenter(getCampaignsUseCase)
-
         presenter.attachView(view)
     }
 
