@@ -22,8 +22,6 @@ class GridItemDecoration(private val itemOffset: Int) : RecyclerView.ItemDecorat
             } else {
                 outRect?.set(0, itemOffset, 0, 0)
             }
-        } else {
-            outRect?.set(0, itemOffset, 0, 0)
         }
     }
 }
