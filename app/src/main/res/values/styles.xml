@@ -28,6 +28,7 @@
     </style>
 
     <style name="Text.WhiteWithShadow.Large">
+        <item name="android:background">@color/blackAlmostTransparent</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">24sp</item>
     </style>
