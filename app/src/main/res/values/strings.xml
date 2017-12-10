@@ -3,4 +3,6 @@
     <string name="base_url">https://static.westwing.de/</string>
     <string name="campaign_list">Campaigns</string>
     <string name="campaign_details">Campaign details</string>
+    <string name="retry">Retry</string>
+    <string name="network_error_message">There was an error. Please check your internet connection and tap here to try again.</string>
 </resources>

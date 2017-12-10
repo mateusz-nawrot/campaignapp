@@ -1,10 +1,12 @@
 package com.nawrot.mateusz.campaignapp.di
 
 import android.content.Context
+import android.net.ConnectivityManager
 import com.nawrot.mateusz.campaignapp.App
 import com.nawrot.mateusz.campaignapp.R
 import com.nawrot.mateusz.campaignapp.data.base.AndroidSchedulersProvider
 import com.nawrot.mateusz.campaignapp.data.campaign.repository.WestwingCampaignsRepository
+import com.nawrot.mateusz.campaignapp.data.network.NetworkInterceptor
 import com.nawrot.mateusz.campaignapp.domain.base.SchedulersProvider
 import com.nawrot.mateusz.campaignapp.domain.campaign.repository.CampaignsRepository
 import com.squareup.moshi.KotlinJsonAdapterFactory
@@ -46,14 +48,21 @@ abstract class AppModule {
 
         @JvmStatic
         @Provides
+        fun connectivityManager(context: Context): ConnectivityManager {
+            return context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        }
+
+        @JvmStatic
+        @Provides
         @Singleton
-        fun okHttpClient(): OkHttpClient {
+        fun okHttpClient(networkInterceptor: NetworkInterceptor): OkHttpClient {
             val builder = OkHttpClient.Builder()
             builder.retryOnConnectionFailure(true)
 
             val logInterceptor = HttpLoggingInterceptor()
             logInterceptor.level = HttpLoggingInterceptor.Level.BODY
             builder.addInterceptor(logInterceptor)
+            builder.addInterceptor(networkInterceptor)
             return builder.build()
         }
 

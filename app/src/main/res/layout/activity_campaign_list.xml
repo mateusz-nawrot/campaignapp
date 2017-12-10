@@ -38,4 +38,6 @@
         android:visibility="gone"
         tools:visibility="visible"/>
 
+    <include layout="@layout/view_error"/>
+
 </android.support.design.widget.CoordinatorLayout>

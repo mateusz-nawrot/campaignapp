@@ -19,13 +19,25 @@
     <TextView
         android:id="@+id/campaignTitle"
         style="@style/Text.WhiteWithShadow.Large"
-        android:background="@color/blackAlmostTransparent"
         android:layout_width="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_height="wrap_content"
+        android:background="@color/blackAlmostTransparent"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/campaignImage"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Campaign Title"/>
+
+    <ProgressBar
+        android:id="@+id/campaignImageProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"/>
 
 </android.support.constraint.ConstraintLayout>

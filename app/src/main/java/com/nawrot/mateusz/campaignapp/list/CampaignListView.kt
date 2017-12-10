@@ -10,4 +10,8 @@ interface CampaignListView : BaseView {
 
     fun openCampaignDetailsScreen(campaign: Campaign)
 
+    fun showNetworkError()
+
+    fun showLoadingVisible(visible: Boolean)
+
 }
