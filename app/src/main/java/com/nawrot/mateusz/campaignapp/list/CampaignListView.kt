@@ -14,4 +14,6 @@ interface CampaignListView : BaseView {
 
     fun showLoadingVisible(visible: Boolean)
 
+    fun retryGetCampaigns()
+
 }

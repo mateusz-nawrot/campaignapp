@@ -29,7 +29,7 @@ class CampaignListPresenter @Inject constructor(private val getCampaignsUseCase:
     }
 
     fun retryClicked() {
-        getCampaigns()
+        view?.retryGetCampaigns()
     }
 
 }

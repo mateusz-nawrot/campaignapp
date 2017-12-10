@@ -94,6 +94,10 @@ class CampaignListActivity : BaseActivity(), CampaignListView, CampaignRowInterf
         campaignsRecycler.hide()
         errorView.show()
     }
+
+    override fun retryGetCampaigns() {
+        presenter.getCampaigns()
+    }
 }
 
 interface CampaignRowInterface {
