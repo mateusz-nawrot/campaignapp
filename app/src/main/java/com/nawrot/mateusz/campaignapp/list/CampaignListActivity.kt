@@ -40,7 +40,6 @@ class CampaignListActivity : BaseActivity(), CampaignListView, CampaignRowInterf
         campaignsAdapter.campaignRowInterface = this
         campaignsRecycler.adapter = campaignsAdapter
         campaignsRecycler.layoutManager = GridLayoutManager(this, resources.getInteger(R.integer.gallery_columns))
-        campaignsRecycler.addItemDecoration(recyclerItemDecoration)
 
         errorView.clicks().subscribe {
             presenter.retryClicked()
